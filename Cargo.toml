@@ -1,6 +1,6 @@
-[package]
-name = "eshop"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = ["app", "entity", "migration"]
+resolver = "2"
 
-[dependencies]
+[workspace.dependencies]
+ntex = { version = "*", features = ["async-std"] }
