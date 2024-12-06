@@ -5,3 +5,7 @@ edition = "2021"
 
 [dependencies]
 entity = { path = "../entity" }
+ntex = { version = "*", features = ["async-std"] }
+once_cell = { version = "*" }
+sqlx = { version = "*", features = ["runtime-async-std-rustls", "postgres"] }
+async-std = { version = "*" }

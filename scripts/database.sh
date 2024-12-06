@@ -8,12 +8,6 @@ POSTGRES_PASSWORD="postgres"
 POSTGRES_DB="eshop"
 POSTGRES_PORT="5432"
 
-# Create the local directory for persistent storage if it doesn't exist
-if [ ! -d "$LOCAL_DATA_DIR" ]; then
-  echo "Creating local directory for persistent data: $LOCAL_DATA_DIR"
-  mkdir -p "$LOCAL_DATA_DIR"
-fi
-
 # Pull the latest PostgreSQL image
 echo "Pulling the latest PostgreSQL image..."
 podman pull $POSTGRES_IMAGE

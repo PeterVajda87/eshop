@@ -1,6 +1,3 @@
 [workspace]
 members = ["app", "entity", "migration"]
 resolver = "2"
-
-[workspace.dependencies]
-ntex = { version = "*", features = ["async-std"] }
