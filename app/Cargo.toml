@@ -5,7 +5,15 @@ edition = "2021"
 
 [dependencies]
 entity = { path = "../entity" }
+migration = { path = "../migration" }
 ntex = { version = "*", features = ["async-std"] }
 once_cell = { version = "*" }
 sqlx = { version = "*", features = ["runtime-async-std-rustls", "postgres"] }
 async-std = { version = "*" }
+sea-orm = { version = "*", features = [
+    "sqlx-postgres",
+    "runtime-async-std-rustls",
+    "macros",
+] }
+config = { version = "*" }
+serde = { version = "*", features = ["derive"] }
