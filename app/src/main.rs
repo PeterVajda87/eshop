@@ -24,7 +24,7 @@ async fn manual_hello() -> impl web::Responder {
 
 #[ntex::main]
 async fn main() -> std::io::Result<()> {
-    Migrator::refresh(db_connection()).await.unwrap();
+    Migrator::fresh(db_connection()).await.unwrap();
     web::HttpServer::new(|| {
         web::App::new()
             .service(hello)
